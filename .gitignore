@@ -1,0 +1,23 @@
+# === Python ignore ===
+data_pipeline/venv/
+__pycache__/
+*.pyc
+data_pipeline/raw_data/
+
+# === .NET Ignore ===
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+
+
+# === Angular Ignore ===
+frontend/node_modules/
+frontend/dist/
+.angular/
+
+# === Databases and Environments ===
+*.duckdb
+*.env
+.DS_Store
