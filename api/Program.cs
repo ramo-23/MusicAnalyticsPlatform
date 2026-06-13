@@ -10,13 +10,10 @@ builder.Services.AddSwaggerGen();
 // Add CORS policy to allow Angular to talk to the API
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularFrontend",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:4200")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowVercel",
+        policy => policy.WithOrigins("https://music-analytics-platform-rose.vercel.app")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
 });
 
 var app = builder.Build();
@@ -31,8 +28,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Apply the CORS policy BEFORE Authorization and Mapping Controllers
-app.UseCors("AllowAngularFrontend");
+// Apply the CORS policy before Authorization and Mapping Controllers
+app.UseCors("Allow Vercel");
 
 app.UseAuthorization();
 
