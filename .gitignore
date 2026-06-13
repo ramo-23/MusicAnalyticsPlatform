@@ -19,6 +19,7 @@ frontend/dist/
 .angular/
 
 # === Databases and Environments ===
+*.db
 *.duckdb
 *.env
 .DS_Store
