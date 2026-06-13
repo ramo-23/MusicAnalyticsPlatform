@@ -1,0 +1,153 @@
+/* Base Dashboard Styling - Invisible wrapper */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Header Typography */
+header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Table Wrapper - Sharper, Minimalist */
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 2px; /* Drastically reduced border radius */
+  border: 1px solid #e5e7eb; /* Crisp 1px border instead of heavy shadow */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Extremely subtle depth */
+}
+
+/* The Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead th {
+  background-color: #f9fafb; /* Light, sleek header instead of heavy black */
+  color: #4b5563;
+  padding: 12px 16px; /* Tighter padding for better data density */
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f3f4f6; /* Very subtle row dividers */
+  color: #1f2937;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Specific Cell Formatting */
+.rank-cell {
+  font-weight: 600;
+  color: #9ca3af; /* Subtle grey for the rank number */
+  width: 60px;
+}
+
+.artist-cell {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Platform Badge - Modern "Outline" Style */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background-color: #fef2f2; /* Soft red background */
+  color: #b91c1c; /* Dark red text */
+  border: 1px solid #fca5a5; /* Crisp border */
+  border-radius: 4px; /* Sharper edges on the badge */
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Loading State */
+.loading-state {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* --- Pagination Controls --- */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 4px;
+}
+
+.page-info {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.page-btn {
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.page-btn:hover:not(:disabled) {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.page-btn:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}

@@ -33,7 +33,7 @@ namespace api.Controllers
                 JOIN Dim_Track t ON f.Track_ID = t.Track_ID
                 JOIN Dim_Artist a ON t.Artist_ID = a.Artist_ID
                 ORDER BY f.Chart_Rank ASC
-                LIMIT 10;
+                LIMIT 200;
             ";
 
             // Map SQL aliases to DTO properties

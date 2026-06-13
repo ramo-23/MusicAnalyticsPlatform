@@ -12,7 +12,7 @@ PIPLINE_DIR = os.path.dirname(SCRIPT_DIR)
 # Load the environment variables from the .env file
 load_dotenv(os.path.join(PIPLINE_DIR, ".env"))
 
-def fetch_top_tracks(tag="amapiano", limit=5):
+def fetch_top_tracks(tag="amapiano", limit=200):
     api_key = os.getenv("LASTFM_API_KEY")
     """
     Fetches the top amapiano tracks from the Last.fm API.
