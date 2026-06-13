@@ -22,6 +22,7 @@ namespace api.Controllers
         public async Task<ActionResult<IEnumerable<TrackMetricDto>>> GetTopTracks()
         {
             using var connection = new DuckDBConnection(_connectionString);
+            connection.Open();
 
             var sql = @"
                 SELECT 
