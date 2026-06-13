@@ -5,6 +5,7 @@ __pycache__/
 data_pipeline/raw_data/
 
 # === .NET Ignore ===
+.vs/
 bin/
 obj/
 *.suo
