@@ -29,7 +29,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Apply the CORS policy before Authorization and Mapping Controllers
-app.UseCors("Allow Vercel");
+app.UseCors("AllowVercel");
 
 app.UseAuthorization();
 
