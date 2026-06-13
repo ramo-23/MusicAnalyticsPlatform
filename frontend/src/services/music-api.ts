@@ -11,7 +11,7 @@ export class MusicApiService {
   private http = inject(HttpClient);
 
   // Point to the backend API endpoint for track metrics
-  private apiUrl = 'https://localhost:7183/api/Analytics';
+  private apiUrl = 'https://amapiano-analytics-api.onrender.com';
 
   getTopTracks(): Observable<TrackMetric[]> {
     return this.http.get<TrackMetric[]>(`${this.apiUrl}/top-tracks`);
